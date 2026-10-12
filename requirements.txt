@@ -1,17 +1,4 @@
-# Tested Python dependencies for the standalone GPU/XPU simulator.
-# Optimum Intel itself is installed separately from its local dflash-pa checkout.
-# Install with uv's `--index-strategy unsafe-best-match` so the XPU torch
-# wheel can win over the CPU-only PyPI torch package.
---index-url https://download.pytorch.org/whl/xpu
---extra-index-url https://pypi.org/simple
 --extra-index-url https://storage.openvinotoolkit.org/simple/wheels/nightly
-
-torch==2.13.0+xpu
-openvino==2026.4.0.dev20260727
-openvino-tokenizers==2026.4.0.0.dev20260727
-transformers==5.5.4
-numpy==2.4.6
-nncf==3.2.0
-safetensors<0.8.0
-cmake>=3.20
-ninja>=1.11
+--pre
+openvino>=2026.5.0.dev0
+numpy>=1.26
